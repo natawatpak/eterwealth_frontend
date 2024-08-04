@@ -1,0 +1,92 @@
+{
+  "navbar": {
+    "home": "Home",
+    "trading": "Trading",
+    "platform": "Platform",
+    "promotion": "Promotion",
+    "contact": "Contact",
+    "login": "Sign Up",
+    "language": "English"
+  },
+  "landing": {
+    "banner1": {
+      "title": "Trading is easy, just start trading with us.",
+      "subtitle": "Start with the best spreads lowest commission with a world class standard trading system",
+      "openAccount": "Open Account"
+    },
+    "banner2": {
+      "point1": {
+        "title": "$3.33 Trillion",
+        "subtitle": "Trading volume In April 2023"
+      },
+      "point2": {
+        "title": "531,511",
+        "subtitle": "Customers In April 2023"
+      },
+      "point3": {
+        "title": "$1.31 Billion",
+        "subtitle": "Customer withdrawals in Q2 2023"
+      },
+      "point4": {
+        "title": "$105.8 Million",
+        "subtitle": "Partner commission in Q2 2023"
+      }
+    },
+    "banner3": {
+      "title": "Covers all products",
+      "point1": {
+        "title": "Forex",
+        "subtitle": "Over 50 pairs from around the world"
+      },
+      "point2": {
+        "title": "Precious metal",
+        "subtitle": "Gold, Silver, Palladium and many more"
+      },
+      "point3": {
+        "title": "Crypto",
+        "subtitle": "Bitcoin and many more"
+      },
+      "point4": {
+        "title": "Stock Index",
+        "subtitle": "Major indicate from around the world"
+      }
+    },
+    "banner4": {
+      "title": "Which account is right for you",
+      "minimumDeposit": "Minimum deposit",
+      "contractSize": "Contract Size",
+      "baseCurrency": "Base Currency",
+      "leverage": "Choose leverage",
+      "ea": "EA",
+      "commission": "Commission",
+      "maxOrder1": "Maximum order",
+      "maxOrder2": "Maximum order",
+      "maxLot": "Maximum lot",
+      "noSwaps": "No swaps"
+    },
+    "banner5": {
+      "title": "Get more than just Forex, Crypto and CFD trading accounts at EterWealth",
+      "point1": { "title": "Personal Account Manager" },
+      "point2": { "title": "Access free Technical Analysis" },
+      "point3": { "title": "Access free FOREX Analysis" },
+      "point4": { "title": "Free daily FOREX News" },
+      "point5": { "title": "All devices Supported" },
+      "point6": { "title": "Monday-Saturday 09.00-20.00" }
+    },
+    "certificates": "Certificates"
+  },
+  "footer": {
+    "aboutCompany" :"About Company",
+    "aboutUs": "About Us",
+    "whyUs": "Why Eterwealth",
+    "customerService": "Customer Service",
+    "trading": "Trading",
+    "accountType": "Account Type",
+    "tradingInstruments": "Trading Instruments",
+    "tradingPlatform": "Trading Platform",
+    "promotion":"Promotion",
+    "tradingBonus":"$30 Trading Bonus",
+    "contactUs": "Contact Us",
+    "tel":"+66 975241244"
+  }
+}
