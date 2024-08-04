@@ -55,7 +55,7 @@ const Navbar = () => {
                 variant="outlined"
                 color="secondary"
               >
-                <Typography textTransform={"none"}>
+                <Typography textTransform={"none"} color="gold">
                   {t(`navbar.login`)}
                 </Typography>
               </Button>

@@ -76,7 +76,7 @@
     "certificates": "Certificates"
   },
   "footer": {
-    "aboutCompany" :"About Company",
+    "aboutCompany": "About Company",
     "aboutUs": "About Us",
     "whyUs": "Why Eterwealth",
     "customerService": "Customer Service",
@@ -84,9 +84,10 @@
     "accountType": "Account Type",
     "tradingInstruments": "Trading Instruments",
     "tradingPlatform": "Trading Platform",
-    "promotion":"Promotion",
-    "tradingBonus":"$30 Trading Bonus",
+    "promotion": "Promotion",
+    "tradingBonus": "$30 Trading Bonus",
     "contactUs": "Contact Us",
-    "tel":"+66 975241244"
+    "tel": "+66 975241244",
+    "email": "Email: support@eterwealth.com"
   }
 }

@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import ClearRoundedIcon from "@mui/icons-material/ClearRounded";
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
@@ -102,17 +102,17 @@ const Banner4 = () => {
       </>
     );
   };
+
   return (
     <Box
       sx={{
         bgcolor: "white",
         width: "100%",
+        pt: "60px",
       }}
     >
       <Box sx={{ pl: "2.5%" }}>
-        <Typography variant="h4" sx={{ pt: "60px" }}>
-          {t("landing.banner4.title")}
-        </Typography>
+        <Typography variant="h4">{t("landing.banner4.title")}</Typography>
         <Divider
           orientation="horizontal"
           flexItem
@@ -122,7 +122,6 @@ const Banner4 = () => {
             mt: "10px",
             bgcolor: "gold",
             borderRadius: "5px",
-            mb: "40px",
           }}
         />
       </Box>
@@ -132,6 +131,7 @@ const Banner4 = () => {
           justifyContent: "center",
           width: "100%",
           gap: "30px",
+          my: "60px",
         }}
       >
         {Object.keys(accounts).map((account) => (
@@ -142,6 +142,7 @@ const Banner4 = () => {
             textAlign="center"
             sx={{
               mx: "10px",
+
               borderRadius: "10px",
               boxShadow: 2,
               minWidth: "200px",

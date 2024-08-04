@@ -1,4 +1,11 @@
-import { Banner1, Banner2, Banner3, Banner4 } from "../../components";
+import {
+  Banner1,
+  Banner2,
+  Banner3,
+  Banner4,
+  Banner5,
+  Certificates,
+} from "../../components/landing";
 
 const Landing = () => {
   return (
@@ -7,6 +14,8 @@ const Landing = () => {
       <Banner2 />
       <Banner3 />
       <Banner4 />
+      <Banner5 />
+      <Certificates />
     </>
   );
 };

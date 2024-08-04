@@ -76,7 +76,7 @@
     "certificates": "หนังสือรับรอง"
   },
   "footer": {
-    "aboutCompany" :"เกี่ยวกับบริษัท",
+    "aboutCompany": "เกี่ยวกับบริษัท",
     "aboutUs": "เกี่ยวกับเรา",
     "whyUs": "ทำไมต้อง Eterwealth",
     "customerService": "บริการลูกค้า",
@@ -84,9 +84,10 @@
     "accountType": "ประเภทบัญชี",
     "tradingInstruments": "ตราสารการซื้อขาย",
     "tradingPlatform": "แพลตฟอร์มการซื้อขาย",
-    "promotion":"โปรโมชั่น",
-    "tradingBonus":"$30 โบนัสซื้อขาย",
+    "promotion": "โปรโมชั่น",
+    "tradingBonus": "$30 โบนัสซื้อขาย",
     "contactUs": "ข้อมูลติดต่อ",
-    "tel":"+66 975241244"
+    "tel": "+66 975241244",
+    "email": "Email: support@eterwealth.com"
   }
 }
