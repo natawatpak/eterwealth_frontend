@@ -1,6 +1,7 @@
 import { Box, Divider, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
+import graphImg from "../../assets/banner3_img.png";
 import forexIcon from "../../assets/forexIcon.png";
 import coinIcon from "../../assets/coinIcon.png";
 import goldIcon from "../../assets/goldIcon.png";
@@ -8,17 +9,17 @@ import stockIcon from "../../assets/stockIcon.png";
 
 const Point = ({ Icon, title, subtitle }) => {
   return (
-    <Box display="flex" alignItems="center" sx={{ mt: "80px" }} width="300px">
+    <Box display="flex" alignItems="center" sx={{ mt: "60px" }} width="300px">
       <Box
         component="img"
         src={Icon}
-        sx={{ height: 40, width: 40, color: "white", mr: "40px" }}
+        sx={{ height: 40, width: 40, color: "white", mr: "25px" }}
       />
       <Box>
         <Typography variant="h6" color="white">
           {title}
         </Typography>
-        <Typography variant="subtitle2" color="grey">
+        <Typography variant="caption" color="white">
           {subtitle}
         </Typography>
       </Box>
@@ -39,18 +40,19 @@ const Banner3 = () => {
     >
       <Box
         component="img"
-        src="https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D"
+        src={graphImg}
+        // src="https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D"
         sx={{
-          width: "30%",
+          display: { xs: "none", md: "block" },
+          width: "35%",
           height: "fit-parent",
-          transform: "scaleX(-1)",
           objectFit: "cover",
         }}
       />
 
-      <Box sx={{ pt: "60px", pb: "80px", px: "80px" }}>
+      <Box sx={{ pt: "80px", pb: "100px", pl: "80px" }}>
         <Box>
-          <Typography color="white" variant="h4">
+          <Typography color="white" variant="h3">
             {t(`landing.banner3.title`)}
           </Typography>
 
@@ -61,12 +63,12 @@ const Banner3 = () => {
               width: "140px",
               height: "3px",
               mt: "10px",
-              bgcolor: "gold",
+              bgcolor: "secondary.main",
               borderRadius: "5px",
             }}
           />
         </Box>
-        <Box display="flex">
+        <Box display="flex" flexDirection={{ xs: "column", md: "row" }}>
           <Point
             Icon={forexIcon}
             title={t("landing.banner3.point1.title")}
@@ -78,7 +80,7 @@ const Banner3 = () => {
             subtitle={t("landing.banner3.point2.subtitle")}
           />
         </Box>
-        <Box display="flex">
+        <Box display="flex" flexDirection={{ xs: "column", md: "row" }}>
           <Point
             Icon={coinIcon}
             title={t("landing.banner3.point3.title")}

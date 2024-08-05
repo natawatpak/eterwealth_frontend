@@ -1,10 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-import RepeatIcon from "@mui/Icons-material/Repeat";
-import PersonOutlineIcon from "@mui/Icons-material/PersonOutline";
-import PaidOutlinedIcon from "@mui/Icons-material/PaidOutlined";
-import Groups2OutlinedIcon from "@mui/Icons-material/Groups2Outlined";
+import RepeatIcon from "@mui/icons-material/Repeat";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import PaidOutlinedIcon from "@mui/icons-material/PaidOutlined";
+import Groups2OutlinedIcon from "@mui/icons-material/Groups2Outlined";
 
 const Point = ({ Icon, title, subtitle }) => {
   return (
@@ -12,11 +12,11 @@ const Point = ({ Icon, title, subtitle }) => {
       display="flex"
       flexDirection="column"
       alignItems="center"
-      sx={{ my: "50px", p: "10px" }}
+      sx={{ my: { xs: "10px", mb: "50px" }, p: "20px" }}
       width="300px"
     >
       <Box
-        bgcolor="#ffec70"
+        bgcolor="secondary.main"
         borderRadius={100}
         width="50px"
         height="50px"
@@ -31,7 +31,7 @@ const Point = ({ Icon, title, subtitle }) => {
       <Typography variant="h4" textAlign={"center"}>
         {title}
       </Typography>
-      <Typography variant="subtitle1" textAlign={"center"}>
+      <Typography variant="subtitle2" textAlign={"center"}>
         {subtitle}
       </Typography>
     </Box>
@@ -41,7 +41,14 @@ const Point = ({ Icon, title, subtitle }) => {
 const Banner2 = () => {
   const { t } = useTranslation();
   return (
-    <Box sx={{ display: "flex", justifyContent: "center" }}>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: { xs: "column", md: "row" },
+        alignItems: "center",
+      }}
+    >
       <Point
         title={t(`landing.banner2.point1.title`)}
         Icon={RepeatIcon}

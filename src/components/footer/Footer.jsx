@@ -7,59 +7,108 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
 const Footer = () => {
   const { t } = useTranslation();
-
+  const TextColumn = ({ title, points }) => {
+    return (
+      <Box sx={{ mb: "20px", width: { xs: "200px", md: "auto" } }}>
+        <Typography
+          variant="body1"
+          fontWeight="600"
+          sx={{ pb: "15px", pr: "15px" }}
+        >
+          {t(`footer.${title}`)}
+        </Typography>
+        {points.map((value) => (
+          <Typography
+            key={value}
+            variant="body2"
+            sx={{ pb: "10px", pr: "15px" }}
+          >
+            {t(`footer.${value}`)}
+          </Typography>
+        ))}
+      </Box>
+    );
+  };
   return (
-    <Box
-      sx={{
-        bgcolor: "black",
-        width: "100%",
-        p: "60px",
-      }}
-    >
-      <Box display="flex" sx={{ color: "white" }} justifyContent="space-evenly">
-        <Box component="img" sx={{ maxHeight: 50 }} src={Logo}></Box>
-        <Box>
-          <Typography variant="subtitle2">
-            {t("footer.aboutCompany")}
-          </Typography>
-          <Typography variant="subtitle1">{t("footer.aboutUs")}</Typography>
-          <Typography variant="subtitle1">{t("footer.whyUs")}</Typography>
-          <Typography variant="subtitle1">
-            {t("footer.customerService")}
-          </Typography>
-        </Box>
+    <>
+      <Box
+        sx={{
+          bgcolor: "black",
+          width: "100%",
+          pt: "50px",
+          pb: "80px",
+        }}
+      >
+        <Box
+          display="flex"
+          sx={{ color: "white", pl: { xs: "30px", md: "auto" } }}
+          justifyContent={{ xs: "left", md: "space-evenly" }}
+          flexWrap="wrap"
+          // flexDirection={{ xs: "column", md: "row" }}
+        >
+          <Box sx={{ width: { xs: "100%", md: "auto" } }}>
+            <Box
+              component="img"
+              sx={{
+                maxHeight: 50,
+                objectFit: "scale-down",
+                width: "fit-content",
+                mb: "20px",
+              }}
+              src={Logo}
+            />
+          </Box>
 
-        <Box>
-          <Typography variant="subtitle2">{t("footer.trading")}</Typography>
-          <Typography variant="subtitle1">{t("footer.accountType")}</Typography>
-          <Typography variant="subtitle1">
-            {t("footer.tradingInstruments")}
-          </Typography>
-          <Typography variant="subtitle1">
-            {t("footer.tradingPlatform")}
-          </Typography>
-        </Box>
+          <TextColumn
+            title="aboutCompany"
+            points={["aboutUs", "whyUs", "customerService"]}
+          />
 
-        <Box>
-          <Typography variant="subtitle2">{t("footer.promotion")}</Typography>
-          <Typography variant="subtitle1">
-            {t("footer.tradingBonus")}
-          </Typography>
-        </Box>
+          <TextColumn
+            title="trading"
+            points={["accountType", "tradingInstruments", "tradingPlatform"]}
+          />
 
-        <Box>
-          <Typography variant="subtitle2">{t("footer.contactUs")}</Typography>
-          <Typography variant="subtitle1" display="flex" alignItems="center">
-            <CallOutlinedIcon sx={{ fontSize: 20, mr: "5px" }} />
-            {t("footer.tel")}
-          </Typography>
-          <Typography variant="subtitle1" display="flex" alignItems="center">
-            <EmailOutlinedIcon sx={{ fontSize: 20, mr: "5px" }} />
-            {t("footer.email")}
-          </Typography>
+          <TextColumn title="promotion" points={["tradingBonus"]} />
+
+          <Box sx={{ mb: "20px", width: { xs: "100%", md: "auto" } }}>
+            <Typography variant="body1" fontWeight="600" sx={{ pb: "15px" }}>
+              {t("footer.contactUs")}
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ pb: "5px" }}
+              display="flex"
+              alignItems="center"
+            >
+              <CallOutlinedIcon sx={{ fontSize: 20, mr: "5px" }} />
+              {t("footer.tel")}
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ pb: "5px" }}
+              display="flex"
+              alignItems="center"
+            >
+              <EmailOutlinedIcon sx={{ fontSize: 20, mr: "5px" }} />
+              {t("footer.email")}
+            </Typography>
+          </Box>
         </Box>
       </Box>
-    </Box>
+      <Box
+        sx={{
+          bgcolor: "primary.light",
+          color: "white",
+          textAlign: "center",
+          py: "20px",
+        }}
+      >
+        <Typography variant="body2">
+          Copyright © 2021 Etherwealth Limited All Right reserved.
+        </Typography>
+      </Box>
+    </>
   );
 };
 

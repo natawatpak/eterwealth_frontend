@@ -59,18 +59,24 @@ const Banner4 = () => {
           "maxLot",
           "noSwaps",
         ].map((field) => (
-          <>
+          <Box
+            key={field}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
             {account[field] === true ? (
               <Box
                 sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  bgcolor: "green",
+                  bgcolor: "success.main",
                   borderRadius: "100px",
                   width: "fit-content",
                   alignSelf: "center",
-                  p: "1px",
                 }}
               >
                 <CheckRoundedIcon sx={{ color: "white", fontSize: 20 }} />
@@ -81,7 +87,7 @@ const Banner4 = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  bgcolor: "red",
+                  bgcolor: "error.main",
                   borderRadius: "100px",
                   width: "fit-content",
                   alignSelf: "center",
@@ -91,13 +97,13 @@ const Banner4 = () => {
                 <ClearRoundedIcon sx={{ color: "white", fontSize: 20 }} />
               </Box>
             ) : (
-              <Typography variant="subtitle1">{account[field]}</Typography>
+              <Typography variant="h5">{account[field]}</Typography>
             )}
 
-            <Typography variant="caption" sx={{ mb: "15px" }}>
+            <Typography variant="body2" color="grey" sx={{ mb: "20px" }}>
               {t(`landing.banner4.${field}`)}
             </Typography>
-          </>
+          </Box>
         ))}
       </>
     );
@@ -109,10 +115,11 @@ const Banner4 = () => {
         bgcolor: "white",
         width: "100%",
         pt: "60px",
+        px: "5%",
       }}
     >
-      <Box sx={{ pl: "2.5%" }}>
-        <Typography variant="h4">{t("landing.banner4.title")}</Typography>
+      <Box>
+        <Typography variant="h3">{t("landing.banner4.title")}</Typography>
         <Divider
           orientation="horizontal"
           flexItem
@@ -120,7 +127,7 @@ const Banner4 = () => {
             width: "140px",
             height: "3px",
             mt: "10px",
-            bgcolor: "gold",
+            bgcolor: "secondary.main",
             borderRadius: "5px",
           }}
         />
@@ -128,10 +135,11 @@ const Banner4 = () => {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
-          width: "100%",
+          flexDirection: { xs: "column", md: "row" },
+          justifyContent: "space-between",
+          alignItems: "center",
           gap: "30px",
-          my: "60px",
+          my: "50px",
         }}
       >
         {Object.keys(accounts).map((account) => (
@@ -141,33 +149,40 @@ const Banner4 = () => {
             flexDirection="column"
             textAlign="center"
             sx={{
-              mx: "10px",
-
+              mx: "5px",
               borderRadius: "10px",
               boxShadow: 2,
               minWidth: "200px",
               maxWidth: "420px",
-              width: "30%",
+              width: { xs: "100%", md: "30%" },
+              pb: "30px",
             }}
           >
             <Box
               sx={{
-                bgcolor: account === "VIP" ? "gold" : "silver",
+                bgcolor: account === "VIP" ? "secondary.main" : "silver",
                 borderRadius: "5px 5px 0px 0px",
                 py: "10px",
                 mb: "30px",
               }}
             >
-              <Typography variant="h6">{account}</Typography>
+              <Typography variant="h5">{account}</Typography>
             </Box>
 
-            <Typography variant="h4">
+            <Typography variant="h3">
               {accounts[account].minimumDeposit}
             </Typography>
-            <Typography variant="subtitle1">
+            <Typography variant="body1" color="grey">
               {t(`landing.banner4.minimumDeposit`)}
             </Typography>
-            <Divider sx={{ m: "15px" }}></Divider>
+            <Divider
+              sx={{
+                m: "15px",
+                alignSelf: "center",
+                bgcolor: "black",
+                width: "50%",
+              }}
+            ></Divider>
             <AccountDetail accountType={account} />
           </Box>
         ))}

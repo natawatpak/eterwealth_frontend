@@ -9,23 +9,22 @@ import LaptopOutlinedIcon from "@mui/icons-material/LaptopOutlined";
 import AccessAlarmOutlinedIcon from "@mui/icons-material/AccessAlarmOutlined";
 
 const Point = ({ Icon, title }) => {
-  console.log(Icon);
   return (
     <Box
       display="flex"
       alignItems="left"
       justifyContent="center"
-      sx={{ my: "20px", p: "10px" }}
-      width="30%"
-      maxWidth="500px"
-      height="140px"
+      sx={{ my: "20px" }}
+      width={{xs: "100%",md: "32%"}}
+      maxWidth="600px"
+      height="120px"
     >
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          bgcolor: "gold",
+          bgcolor: "secondary.main",
           borderRadius: "10px 0px 0px 10px",
           height: "100%",
           width: "20%",
@@ -43,9 +42,10 @@ const Point = ({ Icon, title }) => {
         display="flex"
         alignItems="center"
         justifyContent="center"
+        textAlign="center"
         color="grey"
         backgroundColor="white"
-        variant="h4"
+        variant="h5"
         borderRadius="0px 10px 10px 0px"
         width="100%"
         height="100%"
@@ -65,9 +65,10 @@ const Banner5 = () => {
         bgcolor: "black",
         width: "100%",
         pb: "120px",
+        px: "5%",
       }}
     >
-      <Box sx={{ pl: "2.5%" }}>
+      <Box>
         <Typography variant="h4" sx={{ pt: "60px", color: "white" }}>
           {t("landing.banner5.title")}
         </Typography>
@@ -78,14 +79,21 @@ const Banner5 = () => {
             width: "140px",
             height: "3px",
             mt: "10px",
-            bgcolor: "gold",
+            bgcolor: "secondary.main",
             borderRadius: "5px",
             mb: "40px",
           }}
         />
       </Box>
 
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
         <Point
           title={t(`landing.banner5.point1.title`)}
           Icon={PeopleOutlineOutlinedIcon}
@@ -99,7 +107,14 @@ const Banner5 = () => {
           Icon={LibraryBooksOutlinedIcon}
         />
       </Box>
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
         <Point
           title={t(`landing.banner5.point4.title`)}
           Icon={PublicOutlinedIcon}

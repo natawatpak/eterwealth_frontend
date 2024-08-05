@@ -1,8 +1,8 @@
 import { Box, Divider, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import certificates1 from "../../assets/certificates1.png";
-import certificates2 from "../../assets/certificates2.png";
-import certificates3 from "../../assets/certificates3.png";
+import certificate1 from "../../assets/certificate1.png";
+import certificate2 from "../../assets/certificate2.png";
+import certificate3 from "../../assets/certificate3.png";
 
 const Certificates = () => {
   const { t } = useTranslation();
@@ -13,11 +13,12 @@ const Certificates = () => {
         bgcolor: "white",
         width: "100%",
         pb: "120px",
+        px: "5%",
       }}
     >
-      <Box sx={{ pl: "2.5%" }}>
-        <Typography variant="h4" sx={{ pt: "60px", color: "grey" }}>
-          {t("landing.certificates")}
+      <Box>
+        <Typography variant="h3" sx={{ pt: "60px", color: "grey" }}>
+          {t("landing.certificate")}
         </Typography>
         <Divider
           orientation="horizontal"
@@ -26,27 +27,29 @@ const Certificates = () => {
             width: "140px",
             height: "3px",
             mt: "10px",
-            bgcolor: "gold",
+            bgcolor: "secondary.main",
             borderRadius: "5px",
             mb: "40px",
           }}
         />
 
-        <Box sx={{ display: "flex", gap: "30px", justifyContent: "center" }}>
+        <Box
+          sx={{ display: "flex", justifyContent: "space-between", pr: "2%" }}
+        >
           <Box
             component="img"
-            src={certificates1}
-            sx={{ objectFit: "scale-down" }}
+            src={certificate1}
+            sx={{ objectFit: "scale-down", width: "30%" }}
           ></Box>
           <Box
             component="img"
-            src={certificates2}
-            sx={{ objectFit: "scale-down" }}
+            src={certificate2}
+            sx={{ objectFit: "scale-down", width: "30%" }}
           ></Box>
           <Box
             component="img"
-            src={certificates3}
-            sx={{ objectFit: "scale-down" }}
+            src={certificate3}
+            sx={{ objectFit: "scale-down", width: "30%" }}
           ></Box>
         </Box>
       </Box>
