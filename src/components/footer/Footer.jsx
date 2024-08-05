@@ -105,7 +105,7 @@ const Footer = () => {
         }}
       >
         <Typography variant="body2">
-          Copyright © 2021 Etherwealth Limited All Right reserved.
+          Copyright © 2021 Eterwealth Limited All Right reserved.
         </Typography>
       </Box>
     </>

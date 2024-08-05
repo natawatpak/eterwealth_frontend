@@ -34,7 +34,7 @@ const Banner3 = () => {
       sx={{
         display: "flex",
         bgcolor: "black",
-        justifyContent: "center",
+        justifyContent: { xs: "center", md: "space-between" },
         width: "100%",
       }}
     >
@@ -44,13 +44,13 @@ const Banner3 = () => {
         // src="https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D"
         sx={{
           display: { xs: "none", md: "block" },
-          width: "35%",
+          width: { xs: "auto", md: "40%" },
           height: "fit-parent",
           objectFit: "cover",
         }}
       />
 
-      <Box sx={{ pt: "80px", pb: "100px", pl: "80px" }}>
+      <Box sx={{ pt: "80px", pb: "100px", width: { xs: "auto", md: "50%" } }}>
         <Box>
           <Typography color="white" variant="h3">
             {t(`landing.banner3.title`)}
