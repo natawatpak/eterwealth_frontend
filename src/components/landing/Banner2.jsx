@@ -46,7 +46,7 @@ const Banner2 = () => {
         display: "flex",
         justifyContent: "center",
         flexDirection: { xs: "column", md: "row" },
-        alignItems: "center",
+        alignItems: { xs: "center", md: "flex-start" },
       }}
     >
       <Point

@@ -9,7 +9,12 @@ import stockIcon from "../../assets/stockIcon.png";
 
 const Point = ({ Icon, title, subtitle }) => {
   return (
-    <Box display="flex" alignItems="center" sx={{ mt: "60px" }} width="300px">
+    <Box
+      display="flex"
+      alignItems="center"
+      sx={{ mt: "60px" }}
+      width={{ xs: "250px", md: "300px" }}
+    >
       <Box
         component="img"
         src={Icon}
@@ -36,6 +41,7 @@ const Banner3 = () => {
         bgcolor: "black",
         justifyContent: { xs: "center", md: "space-between" },
         width: "100%",
+        px: { xs: "5%" },
       }}
     >
       <Box
@@ -68,7 +74,11 @@ const Banner3 = () => {
             }}
           />
         </Box>
-        <Box display="flex" flexDirection={{ xs: "column", md: "row" }}>
+        <Box
+          display="flex"
+          flexDirection={{ xs: "column", md: "row" }}
+          alignItems={{ xs: "center" }}
+        >
           <Point
             Icon={forexIcon}
             title={t("landing.banner3.point1.title")}
@@ -80,7 +90,11 @@ const Banner3 = () => {
             subtitle={t("landing.banner3.point2.subtitle")}
           />
         </Box>
-        <Box display="flex" flexDirection={{ xs: "column", md: "row" }}>
+        <Box
+          display="flex"
+          flexDirection={{ xs: "column", md: "row" }}
+          alignItems={{ xs: "center" }}
+        >
           <Point
             Icon={coinIcon}
             title={t("landing.banner3.point3.title")}

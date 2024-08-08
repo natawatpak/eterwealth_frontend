@@ -2,6 +2,7 @@ import { Box, Divider, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import ClearRoundedIcon from "@mui/icons-material/ClearRounded";
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
+import GreyCoinImg from "../../assets/greycoin.png";
 
 const accounts = {
   CLASSIC: {
@@ -116,10 +117,26 @@ const Banner4 = () => {
         width: "100%",
         pt: "60px",
         px: "5%",
+        position: "relative",
+        overflow: "hidden",
+        "&:before": {
+          content: "' '",
+          position: "absolute",
+          opacity: 0.6,
+          width: "750px",
+          height: "750px",
+          backgroundImage: `url(${GreyCoinImg})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          top: "-300px",
+          left: "-300px",
+        },
       }}
     >
       <Box>
-        <Typography variant="h3">{t("landing.banner4.title")}</Typography>
+        <Typography variant="h3" sx={{ position: "relative" }}>
+          {t("landing.banner4.title")}
+        </Typography>
         <Divider
           orientation="horizontal"
           flexItem
@@ -129,6 +146,7 @@ const Banner4 = () => {
             mt: "10px",
             bgcolor: "secondary.main",
             borderRadius: "5px",
+            position: "relative",
           }}
         />
       </Box>
@@ -156,6 +174,8 @@ const Banner4 = () => {
               maxWidth: "420px",
               width: { xs: "100%", md: "30%" },
               pb: "30px",
+              bgcolor: "white",
+              position: "relative",
             }}
           >
             <Box

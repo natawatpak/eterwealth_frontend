@@ -7,6 +7,7 @@ import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
 import PublicOutlinedIcon from "@mui/icons-material/PublicOutlined";
 import LaptopOutlinedIcon from "@mui/icons-material/LaptopOutlined";
 import AccessAlarmOutlinedIcon from "@mui/icons-material/AccessAlarmOutlined";
+import GreyCoinImg from "../../assets/greycoin_shadow.png";
 
 const Point = ({ Icon, title }) => {
   return (
@@ -15,7 +16,7 @@ const Point = ({ Icon, title }) => {
       alignItems="left"
       justifyContent="center"
       sx={{ my: "20px" }}
-      width={{xs: "100%",md: "32%"}}
+      width={{ xs: "100%", md: "32%" }}
       maxWidth="600px"
       height="120px"
     >
@@ -29,6 +30,7 @@ const Point = ({ Icon, title }) => {
           height: "100%",
           width: "20%",
           px: "10px",
+          position: "relative",
         }}
       >
         <Icon
@@ -49,6 +51,7 @@ const Point = ({ Icon, title }) => {
         borderRadius="0px 10px 10px 0px"
         width="100%"
         height="100%"
+        sx={{ position: "relative" }}
       >
         {title}
       </Typography>
@@ -66,8 +69,23 @@ const Banner5 = () => {
         width: "100%",
         pb: "120px",
         px: "5%",
+        position: "relative",
+        overflow: "hidden",
+        "&:before": {
+          content: "' '",
+          position: "absolute",
+          opacity: 0.6,
+          width: "500px",
+          height: "500px",
+          backgroundImage: `url(${GreyCoinImg})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          bottom: "-200px",
+          right: "-120px",
+        },
       }}
     >
+      {/* <Box component={"img"} src={GreyCoinImg} sx={{ opacity: "0.6" }}></Box> */}
       <Box>
         <Typography variant="h4" sx={{ pt: "60px", color: "white" }}>
           {t("landing.banner5.title")}
