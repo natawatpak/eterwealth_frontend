@@ -169,7 +169,7 @@ const Banner4 = () => {
             sx={{
               mx: "5px",
               borderRadius: "10px",
-              boxShadow: 2,
+              boxShadow: "2px 2px 10px lightGray",
               minWidth: "200px",
               maxWidth: "420px",
               width: { xs: "100%", md: "30%" },
